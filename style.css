@@ -1,0 +1,21 @@
+#map{
+    height: 125vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("images/worldMap.jpeg");
+    background-position: center;
+
+}
+
+#pin_T {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: 13%;
+    left: 19.5%;
+}
+
+#pin_T:hover {
+    transform: scale(1.5);
+}
