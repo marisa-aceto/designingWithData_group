@@ -99,7 +99,12 @@
 
 .clouds {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 5%;
     opacity: 0;
+    height: 120px;
+}
+
+.clouds:nth-of-type {
+
 }

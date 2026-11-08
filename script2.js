@@ -6,6 +6,8 @@ clouds = document.getElementsByClassName("clouds");
 fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
+
+
         console.log(data)
 
         let temp = data.current.temperature_2m;
@@ -28,6 +30,7 @@ fetch(apiURL)
             t_skyline.style.backgroundRepeat = "no-repeat";
         }
 
+
         if (cloudy <= 25) {
             clouds[0].style.opacity = "0.75";
 
@@ -37,7 +40,7 @@ fetch(apiURL)
             clouds[1].style.opacity = "0.75";
         }
 
-        else if (cloudy <= 50) {
+        else if (cloudy <= 75) {
             clouds[0].style.opacity = "0.75";
             clouds[1].style.opacity = "0.75";
             clouds[2].style.opacity = "0.75";
@@ -51,3 +54,9 @@ fetch(apiURL)
 
 
 });
+
+for (let cloud = 0; cloud < clouds.length; cloud++) {
+    clouds[cloud].style.top = Math.random() * 10 + "%";
+    clouds[cloud].style.left = Math.random() * 100 + "%";
+    clouds[cloud].style.height = Math.random() * 250 + "px";
+}
