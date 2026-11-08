@@ -19,3 +19,27 @@
 #pin_T:hover {
     transform: scale(1.5);
 }
+
+#pin_S {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: 13%;
+    left: 75%;
+}
+
+#pin_S:hover {
+    transform: scale(1.5);
+}
+
+#pin_N {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: 35%;
+    left: 75%;
+}
+
+#pin_N:hover {
+    transform: scale(1.5);
+}
