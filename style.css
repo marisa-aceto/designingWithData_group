@@ -88,7 +88,7 @@
     width: 100vw;
 }
 
-#toronto {
+#toronto, #shanghai, #beijing, #newyork {
     display: flex;
     position: relative;
     align-items: center;
