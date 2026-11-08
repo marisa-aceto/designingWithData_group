@@ -7,7 +7,15 @@ fetch(apiURL)
         console.log(data)
 
         let temp = data.current.temperature_2m;
+        let daytime = data.current.is_day;
 
         document.querySelector("#temp_T").textContent = temp;
+
+        if (daytime == 1) {
+            document.querySelector("#day_T").textContent = "day time";
+        }
+        else {
+            document.querySelector("#day_T").textContent = "night time";
+        }
 
 });

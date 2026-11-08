@@ -64,4 +64,20 @@
     position: relative;
     display: flex;
     filter: drop-shadow(5px 5px 5px grey);
+    
+}
+
+@keyframes globeSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(190deg);
+  }
+  75% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
