@@ -43,3 +43,25 @@
 #pin_N:hover {
     transform: scale(1.5);
 }
+
+@font-face {
+    font-family: 'Normal';
+    src: url('font/Lakeside_Castle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#titleFont {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    left: 50%;
+    font-size: 60px;
+    font-family: 'Normal';
+}
+
+#globe {
+    position: relative;
+    display: flex;
+    filter: drop-shadow(5px 5px 5px grey);
+}
