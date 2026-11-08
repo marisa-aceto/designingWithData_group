@@ -81,3 +81,25 @@
     transform: rotate(0deg);
   }
 }
+
+#t_skyline {
+    display: block;
+    position: fixed;
+    width: 100vw;
+}
+
+#toronto {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+}
+
+.clouds {
+    display: flex;
+    position: fixed;
+    top: 5%;
+    opacity: 0;
+}
