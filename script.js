@@ -1,6 +1,6 @@
 pin = document.getElementById("pin_T");
 pin2 = document.getElementById("pin_S");
-pin3 = document.getElementById("pin_N");
+pin3 = document.getElementById("pin_B");
 
 pin.addEventListener("click", function() { 
     window.location.href = "index2.html";

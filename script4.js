@@ -1,5 +1,5 @@
 let city = "Beijing";
-const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=-79.34&hourly=temperature_2m&current=temperature_2m,is_day,precipitation,rain,snowfall,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m`;
+const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=39.90&longitude=116.40&hourly=temperature_2m&current=temperature_2m,is_day,precipitation,rain,snowfall,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m`;
 b_skyline = document.getElementById("b_skyline");
 clouds = document.getElementsByClassName("clouds");
 
@@ -21,13 +21,13 @@ fetch(apiURL)
 
         if (daytime == 1) {
             document.querySelector("#day_B").textContent = "day time";
-            t_skyline.style.backgroundImage = "url(images/daysky.jpg)";
-            t_skyline.style.backgroundRepeat = "no-repeat";
+            b_skyline.style.backgroundImage = "url(images/daysky.jpg)";
+            b_skyline.style.backgroundRepeat = "no-repeat";
         }
         else if (daytime == 0) {
             document.querySelector("#day_B").textContent = "night time";
-            t_skyline.style.backgroundImage = "url(images/nightsky.jpg)";
-            t_skyline.style.backgroundRepeat = "no-repeat";
+            b_skyline.style.backgroundImage = "url(images/nightsky.jpg)";
+            b_skyline.style.backgroundRepeat = "no-repeat";
         }
 
 

@@ -1,5 +1,5 @@
 let city = "Shanghai";
-const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=43.65&longitude=-79.34&hourly=temperature_2m&current=temperature_2m,is_day,precipitation,rain,snowfall,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m`;
+const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&hourly=temperature_2m&current=temperature_2m,is_day,precipitation,rain,snowfall,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m`;
 s_skyline = document.getElementById("s_skyline");
 clouds = document.getElementsByClassName("clouds");
 

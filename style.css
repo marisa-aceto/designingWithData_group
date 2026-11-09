@@ -12,8 +12,8 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 13%;
-    left: 19.5%;
+    top: 20%;
+    left: 18%;
 }
 
 #pin_T:hover {
@@ -24,23 +24,23 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 13%;
-    left: 75%;
+    top: 23%;
+    left: 86%;
 }
 
 #pin_S:hover {
     transform: scale(1.5);
 }
 
-#pin_N {
+#pin_B {
     position: relative;
     display: flex;
     height: 75px;
-    top: 35%;
-    left: 75%;
+    top: 9%;
+    left: 83%;
 }
 
-#pin_N:hover {
+#pin_B:hover {
     transform: scale(1.5);
 }
 
@@ -82,7 +82,7 @@
   }
 }
 
-#t_skyline {
+#t_skyline, #b_skyline, #s_skyline {
     display: block;
     position: fixed;
     width: 100vw;
