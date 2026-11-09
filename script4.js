@@ -2,13 +2,6 @@ let city = "Beijing";
 const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=39.90&longitude=116.40&hourly=temperature_2m&current=temperature_2m,is_day,precipitation,rain,snowfall,showers,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m`;
 b_skyline = document.getElementById("b_skyline");
 clouds = document.getElementsByClassName("clouds");
-beijing = document.getElementById("beijing");
-text = document.getElementsByClassName("t_text");
-rainfall = document.getElementById("rainfall");
-weatherBox = document.getElementById("weatherBox_T");
-outfit = document.getElementById("outfit_T");
-weatherBox2 = document.getElementById("weatherBox_T2");
-
 
 fetch(apiURL)
     .then((response) => response.json())
@@ -20,48 +13,36 @@ fetch(apiURL)
         let temp = data.current.temperature_2m;
         let daytime = data.current.is_day;
         let cloudy = data.current.cloud_cover;
-        let rainy = data.current.rain;
 
-        document.querySelector("#temp_T").textContent = temp;
+        document.querySelector("#temp_B").textContent = temp;
 
-        document.querySelector("#cloud_T").textContent = cloudy;
+        document.querySelector("#cloud_B").textContent = cloudy;
 
 
         if (daytime == 1) {
-            document.querySelector("#day_T").textContent = "day time";
+            document.querySelector("#day_B").textContent = "day time";
             b_skyline.style.backgroundImage = "url(images/daysky.jpg)";
             b_skyline.style.backgroundRepeat = "no-repeat";
-            text[0].style.color = "black";
-            text[1].style.color = "black";
-            text[2].style.color = "black";
-            text[3].style.color = "black";
-            text[4].style.color = "black";
         }
         else if (daytime == 0) {
-            document.querySelector("#day_T").textContent = "night time";
+            document.querySelector("#day_B").textContent = "night time";
             b_skyline.style.backgroundImage = "url(images/nightsky.jpg)";
             b_skyline.style.backgroundRepeat = "no-repeat";
-            b_skyline.style.filter = "brightness(0.5)";
-            text[0].style.color = "white";
-            text[1].style.color = "white";
-            text[2].style.color = "white";
-            text[3].style.color = "white";
-            text[4].style.color = "white";
         }
 
 
         if (cloudy <= 25) {
-            clouds[0].style.opacity = "0.2";
+            clouds[0].style.opacity = "0.75";
 
         }
         else if (cloudy <= 50) {
-            clouds[0].style.opacity = "0.5";
+            clouds[0].style.opacity = "0.75";
             clouds[1].style.opacity = "0.75";
         }
 
         else if (cloudy <= 75) {
             clouds[0].style.opacity = "0.75";
-            clouds[1].style.opacity = "0.5";
+            clouds[1].style.opacity = "0.75";
             clouds[2].style.opacity = "0.75";
         }
         else {
@@ -71,57 +52,11 @@ fetch(apiURL)
             clouds[3].style.opacity = "0.75";
         }
 
-        document.querySelector("#rain_T").textContent = rainy;
-
-        if (rainy == 0) {
-            rainfall.style.opacity = "0";
-        }
-        else if (rainy <= 2.5) {
-            rainfall.style.opacity = "0.5";
-            rainfall.style.animation = "rainMove 2s infinite"
-        }
-        else if (rainy <=20) {
-            rainfall.style.opacity = "0.75";
-            rainfall.style.animation = "rainMove 1.5s infinite"
-        }
-        else {
-            rainfall.style.opacity = "1";
-            rainfall.style.animation = "rainMove 0.75s infinite"
-        }
-
-        if (temp >= 16) {
-            document.querySelector("#outfit_inside_T").textContent = "shorts, t-shirts, and dresses!";
-        }
-
-        else if (temp >= 5) {
-            document.querySelector("#outfit_inside_T").textContent = "a light jacket, sweaters, and jeans";
-        }
-
-        else {
-            document.querySelector("#outfit_inside_T").textContent = "a heavy jacket, hats, and gloves";
-        }
-
 
 });
 
 for (let cloud = 0; cloud < clouds.length; cloud++) {
     clouds[cloud].style.top = Math.random() * 10 + "%";
-    clouds[cloud].style.left = Math.random() * 80 + "%";
-    clouds[cloud].style.height = Math.random() * 100 + "%";
+    clouds[cloud].style.left = Math.random() * 100 + "%";
+    clouds[cloud].style.height = Math.random() * 250 + "px";
 }
-
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 100) {
-        weatherBox.classList.add("show");
-    } 
-    else {
-        weatherBox.classList.remove("show");
-    }
-
-    if (window.scrollY > 400) {
-        weatherBox2.classList.add("show");
-    } 
-    else {
-        weatherBox2.classList.remove("show");
-    }
-});

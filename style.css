@@ -5,7 +5,11 @@
     background-repeat: no-repeat;
     background-image: url("images/worldMap.jpeg");
     background-position: center;
+    overflow-y: hidden;
+}
 
+#before {
+    height: 50vh;
 }
 
 #pin_T {
@@ -13,10 +17,22 @@
     display: flex;
     height: 75px;
     top: 20%;
-    left: 18%;
+    left: 20%;
+}
+
+#pin_R {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: 14%;
+    left: 48%;
 }
 
 #pin_T:hover {
+    transform: scale(1.5);
+}
+
+#pin_R:hover {
     transform: scale(1.5);
 }
 
@@ -51,6 +67,15 @@
     font-style: normal;
 }
 
+.t_text {
+    font-size: 25px;
+}
+
+body {
+    overflow-x: hidden;
+    height: 250vh;
+}
+
 #titleFont {
     display: flex;
     position: fixed;
@@ -83,25 +108,41 @@
 }
 
 #t_skyline {
-    display: block;
-    position: fixed;
-    width: 100vw;
-}
-
-#b_skyline, #s_skyline{
-    display: block;
+    height: 100vh;
+    display:  flexbox;
     position: fixed;
     width: 100%;
-    min-height: 100vh;
 }
 
-#toronto, #shanghai, #beijing, #newyork {
+#r_skyline {
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+#toronto {
     display: flex;
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: auto;
+    width: 100%;
+}
+
+#rome {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#shanghai, #beijing, #newyork {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .clouds {
@@ -110,20 +151,121 @@
     top: 5%;
     opacity: 0;
     height: 120px;
+    animation: cloudMove 20s ease-in-out alternate infinite;
 }
 
+@keyframes cloudMove {
+  0% {
+    transform: translateX(50%);
+  }
+  20% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: translateX(-70%);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
-#weatherBox_T, #weatherBox_T2 {
+@keyframes rainMove {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.5;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#rainfall {
+    display: flex;
+    position: relative;
+    width: 100%;
+    top: -30%;
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease, transform 1s ease;
 }
 
-#weatherBox_T.show, #weatherBox_T2.show {
+#weatherBox_T {
+    position: fixed;
+    display: flexbox;
+    left: 70%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background: grey;
+    transition: opacity 1.5s;
+    opacity: 0;
+    color: white;
+    border-radius: 10px;
+}
+
+#weatherBox_T.show {
     opacity: 1;
-    transform: translateY(0);
 }
 
-.clouds:nth-of-type {
+#weatherBox_T2 {
+    position: fixed;
+    display: flexbox;
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background: grey;
+    transition: opacity 1.5s;
+    opacity: 0;
+    color: white;
+    border-radius: 10px;
+}
 
+#weatherBox_T2.show {
+    opacity: 1;
+}
+
+#outfit_T {
+    font-size: 25px;
+}
+
+.button_back {
+    padding: 20px;
+    background: grey;
+    position: fixed;
+    display: flex;
+    top: 80%;
+    left: 5%;
+    font-size: 25px;
+    color: white;
+    z-index: 1;
+}
+
+.button_back:hover {
+    background: darkgray;
+}
+
+h1.map_text {
+    align-items: center;
+    font-size: 60px;
+    font-family: Normal;
+    padding: 30px;
+    background-color: steelblue;
+}
+p.map_text {
+    align-items: center;
+    font-size: 40px;
+    font-family: Normal;
+    padding: 30px;
+    background-color: steelblue;
 }
