@@ -4,6 +4,9 @@ t_skyline = document.getElementById("t_skyline");
 clouds = document.getElementsByClassName("clouds");
 toronto = document.getElementById("toronto");
 text = document.getElementsByClassName("t_text");
+rainfall = document.getElementById("rainfall");
+weatherBox = document.getElementById("weatherBox_T");
+outfit = document.getElementById("outfit_T");
 
 fetch(apiURL)
     .then((response) => response.json())
@@ -15,6 +18,7 @@ fetch(apiURL)
         let temp = data.current.temperature_2m;
         let daytime = data.current.is_day;
         let cloudy = data.current.cloud_cover;
+        let rainy = data.current.rain;
 
         document.querySelector("#temp_T").textContent = temp;
 
@@ -29,6 +33,7 @@ fetch(apiURL)
             text[1].style.color = "black";
             text[2].style.color = "black";
             text[3].style.color = "black";
+            text[4].style.color = "black";
         }
         else if (daytime == 0) {
             document.querySelector("#day_T").textContent = "night time";
@@ -39,6 +44,7 @@ fetch(apiURL)
             text[1].style.color = "white";
             text[2].style.color = "white";
             text[3].style.color = "white";
+            text[4].style.color = "white";
         }
 
 
@@ -63,11 +69,50 @@ fetch(apiURL)
             clouds[3].style.opacity = "0.75";
         }
 
+        document.querySelector("#rain_T").textContent = rainy;
+
+        if (rainy == 0) {
+            rainfall.style.opacity = "0";
+        }
+        else if (rainy <= 2.5) {
+            rainfal.style.opacity = "0.5";
+            rainfall.style.animation = "rainMove 2s infinite"
+        }
+        else if (rainy <=20) {
+            rainfal.style.opacity = "0.75";
+            rainfall.style.animation = "rainMove 1.5s infinite"
+        }
+        else {
+            rainfal.style.opacity = "1";
+            rainfall.style.animation = "rainMove 0.75s infinite"
+        }
+
+        if (temp >= 16) {
+            document.querySelector("#outfit_inside_T").textContent = "shorts, t-shirts, and dresses!";
+        }
+
+        else if (temp >= 5) {
+            document.querySelector("#outfit_inside_T").textContent = "a light jacket, sweaters, and jeans";
+        }
+
+        else {
+            document.querySelector("#outfit_inside_T").textContent = "a heavy jacket, hats, and gloves";
+        }
+
 
 });
 
 for (let cloud = 0; cloud < clouds.length; cloud++) {
     clouds[cloud].style.top = Math.random() * 10 + "%";
     clouds[cloud].style.left = Math.random() * 100 + "%";
-    clouds[cloud].style.height = Math.random() * 250 + "px";
+    clouds[cloud].style.height = Math.random() * 100 + "%";
 }
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 150) {
+        weatherBox.classList.add("show");
+    } 
+    else {
+        weatherBox.classList.remove("show");
+    }
+});
