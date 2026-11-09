@@ -86,19 +86,22 @@
   }
 }
 
-<<<<<<< Updated upstream
-#t_skyline, #b_skyline, #s_skyline {
-    display: block;
-=======
 #t_skyline {
     height: 100vh;
     display:  flexbox;
->>>>>>> Stashed changes
     position: fixed;
     width: 100%;
 }
 
-#toronto, #shanghai, #beijing, #newyork {
+#toronto {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#shanghai, #beijing, #newyork {
     display: flex;
     position: absolute;
     align-items: center;
