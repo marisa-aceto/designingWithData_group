@@ -7,6 +7,8 @@ text = document.getElementsByClassName("t_text");
 rainfall = document.getElementById("rainfall");
 weatherBox = document.getElementById("weatherBox_T");
 outfit = document.getElementById("outfit_T");
+weatherBox2 = document.getElementById("weatherBox_T2");
+
 
 fetch(apiURL)
     .then((response) => response.json())
@@ -49,7 +51,7 @@ fetch(apiURL)
 
 
         if (cloudy <= 25) {
-            clouds[0].style.opacity = "0.25";
+            clouds[0].style.opacity = "0.2";
 
         }
         else if (cloudy <= 50) {
@@ -109,7 +111,14 @@ for (let cloud = 0; cloud < clouds.length; cloud++) {
 }
 
 window.addEventListener("scroll", function() {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 100) {
+        weatherBox2.classList.add("show");
+    } 
+    else {
+        weatherBox2.classList.remove("show");
+    }
+
+    if (window.scrollY > 400) {
         weatherBox.classList.add("show");
     } 
     else {
