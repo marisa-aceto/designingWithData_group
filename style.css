@@ -162,7 +162,7 @@ body {
     transform: scale(0.9);
   }
   50% {
-    transform: translateX(-20%);
+    transform: translateX(-70%);
   }
   60% {
     transform: scale(0.9);

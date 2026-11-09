@@ -106,22 +106,22 @@ fetch(apiURL)
 
 for (let cloud = 0; cloud < clouds.length; cloud++) {
     clouds[cloud].style.top = Math.random() * 10 + "%";
-    clouds[cloud].style.left = Math.random() * 100 + "%";
+    clouds[cloud].style.left = Math.random() * 80 + "%";
     clouds[cloud].style.height = Math.random() * 100 + "%";
 }
 
 window.addEventListener("scroll", function() {
     if (window.scrollY > 100) {
-        weatherBox2.classList.add("show");
-    } 
-    else {
-        weatherBox2.classList.remove("show");
-    }
-
-    if (window.scrollY > 400) {
         weatherBox.classList.add("show");
     } 
     else {
         weatherBox.classList.remove("show");
+    }
+
+    if (window.scrollY > 400) {
+        weatherBox2.classList.add("show");
+    } 
+    else {
+        weatherBox2.classList.remove("show");
     }
 });
