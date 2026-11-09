@@ -114,7 +114,22 @@ body {
     width: 100%;
 }
 
+#r_skyline {
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
 #toronto {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#rome {
     display: flex;
     position: absolute;
     align-items: center;
