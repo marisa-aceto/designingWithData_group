@@ -47,9 +47,9 @@ fetch(apiURL)
 
     div2.style.height = cloudy + "%";
     div2.style.background = "darkgrey";
-    div3.style.height = rainy + "%";
+    div3.style.height = (rainy * 10) + "%";
     div2.style.background = "lightblue";
-    div4.style.height = snowy + "%";
+    div4.style.height = (snowy * 10) + "%";
     div2.style.background = "lightgreen";
 
     document.querySelector("#temp_Search").textContent = temp;
@@ -64,18 +64,9 @@ fetch(apiURL2)
 .then(data => {
 
     console.log(data);
-    console.log(data.address);
     console.log(data.display_name);
 
-    let city = data.address.city || data.address.town;
-    let state = data.address.state;
-    let country = data.address.country;
+    document.querySelector("#place").textContent = data.display_name;
 
-    if (city == "undefined") {
-        document.querySelector("#place").textContent = city + ", " + state + ", " + country;
-    }
 
-    else{
-        document.querySelector("#place").textContent = state + ", " + country;
-    }
 });
