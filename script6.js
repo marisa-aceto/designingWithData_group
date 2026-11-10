@@ -52,8 +52,11 @@ fetch(apiURL)
             weatherBox.style.color = "navyblue";
         }
 
+        if (cloudy == 0) {
+            clouds[0].style.opacity = "0s";
+        }
 
-        if (cloudy <= 25) {
+        else if (cloudy <= 25) {
             clouds[0].style.opacity = "0.2";
 
         }
