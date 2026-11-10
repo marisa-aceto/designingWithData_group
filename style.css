@@ -142,14 +142,14 @@ body.indexSearch {
     width: 100%;
 }
 
-#s_skyline{
+#s_skyline {
     height: 100vh;
     display:  flexbox;
     position: fixed;
     width: 100%;
 }
 
-#b_skyline{
+#b_skyline {
     height: 100vh;
     display:  flexbox;
     position: fixed;
