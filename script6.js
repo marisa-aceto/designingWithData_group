@@ -49,7 +49,7 @@ fetch(apiURL)
             text[2].style.color = "lightblue";
             text[3].style.color = "lightblue";
             text[4].style.color = "lightblue";
-            weatherBox.style.color = "navyblue";
+            weatherBox.style.color = "lightblue";
         }
 
         if (cloudy == 0) {

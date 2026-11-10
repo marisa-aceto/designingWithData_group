@@ -52,7 +52,7 @@ fetch(apiURL)
         }
 
         if (cloudy == 0) {
-            clouds[0].style.opacity = "0";
+            clouds[0].style.opacity = "0s";
         }
 
         else if (cloudy <= 25) {

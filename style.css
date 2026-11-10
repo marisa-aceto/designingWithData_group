@@ -390,3 +390,8 @@ p.map_text {
     background-color: darkgrey;
     border-radius: 5px;
 }
+
+label {
+    font-family: "Normal";
+    font-size: 25px;
+}
