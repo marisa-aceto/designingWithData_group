@@ -142,6 +142,21 @@ body.indexSearch {
     width: 100%;
 }
 
+#s_skyline{
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+#b_skyline{
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+
 #toronto {
     display: flex;
     position: absolute;
