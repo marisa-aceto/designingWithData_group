@@ -2,6 +2,10 @@ let params = new URLSearchParams(window.location.search);
 
 let latitude = params.get("latitude");
 let longitude = params.get("longitude");
+let div1 = document.getElementById("temp");
+let div2 = document.getElementById("cloud");
+let div3 = document.getElementById("rain");
+let div4 = document.getElementById("snow");
 
 console.log(latitude);
 console.log(longitude);
@@ -18,6 +22,25 @@ fetch(apiURL)
     let temp = data.current.temperature_2m;
     let cloudy = data.current.cloud_cover;
     let rainy = data.current.rain;
+    let snowy = data.current.snowfall;
+
+    if (temp >= 0) {
+        div1.style.height = ((temp / 40) * 50) + (50) + "%";
+        div1.style.background = "red";
+    }
+    else {
+        div1.style.height = (-temp / 40) * 50 + "%";
+        div1.style.background = "blue";
+    }
+
+    div2.style.height = cloudy + "%";
+    div3.style.height = rainy + "%";
+    div4.style.height = snowy + "%";
+
+    document.querySelector("#temp_Search").textContent = temp;
+    document.querySelector("#cloud_Search").textContent = cloudy;
+    document.querySelector("#rain_Search").textContent = rainy;
+    document.querySelector("#snow_Search").textContent = snowy;
 
 });
 

@@ -271,5 +271,25 @@ p.map_text {
 }
 
 .bars {
-    display: inline-flex;
+    display: flex;
+    column-gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar_Location {
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+    width: 50px;
+    background: grey;
+    border-radius: 5px;
+    align-items: flex-end;
+
+}
+
+.bar_Location div {
+    width: 100%;
+    background-color: darkgrey;
+    border-radius: 5px;
 }
