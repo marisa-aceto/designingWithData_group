@@ -72,18 +72,18 @@ fetch(apiURL)
             clouds[2].style.opacity = "0.75";
             clouds[3].style.opacity = "0.75";
         }
-
         if (temp >= 16) {
-            document.querySelector("#outfit_inside_R").textContent = "shorts, t-shirts, and dresses!";
+            document.querySelector("#outfit_inside_T").textContent = "shorts, t-shirts, and dresses!";
         }
 
         else if (temp >= 5) {
-            document.querySelector("#outfit_inside_R").textContent = "a light jacket, sweaters, and jeans";
+            document.querySelector("#outfit_inside_T").textContent = "a light jacket, sweaters, and jeans";
         }
 
         else {
-            document.querySelector("#outfit_inside_R").textContent = "a heavy jacket, hats, and gloves";
+            document.querySelector("#outfit_inside_T").textContent = "a heavy jacket, hats, and gloves";
         }
+
 
         document.querySelector("#rain_T").textContent = rainy;
 

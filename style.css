@@ -142,31 +142,20 @@ body.indexSearch {
     width: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-#s_skyline{
-=======
 #s_skyline {
->>>>>>> Stashed changes
     height: 100vh;
     display:  flexbox;
     position: fixed;
     width: 100%;
 }
 
-<<<<<<< Updated upstream
-#b_skyline{
-=======
 #b_skyline {
->>>>>>> Stashed changes
     height: 100vh;
     display:  flexbox;
     position: fixed;
     width: 100%;
 }
 
-=======
->>>>>>> parent of 8eccf87 (Added changes and changed Beijing skyline)
 #toronto {
     display: flex;
     position: absolute;
