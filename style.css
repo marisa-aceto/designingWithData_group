@@ -16,16 +16,16 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 18%;
-    left: 20.5%;
+    top: 20%;
+    left: 20%;
 }
 
 #pin_R {
     position: relative;
     display: flex;
     height: 75px;
-    top: 14.5%;
-    left: 47.5%;
+    top: 14%;
+    left: 48%;
 }
 
 #pin_T:hover {
@@ -40,8 +40,8 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 14%;
-    left: 85%;
+    top: 23%;
+    left: 86%;
 }
 
 #pin_S:hover {
@@ -52,38 +52,13 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 1%;
+    top: 9%;
     left: 83%;
 }
 
 #pin_B:hover {
     transform: scale(1.5);
 }
-
-#pin_V {
-    position: relative;
-    display: flex;
-    height: 75px;
-    top: -20%;
-    left: 50%;
-}
-
-#pin_V:hover {
-    transform: scale(1.5);
-}
-
-#pin_N {
-    position: relative;
-    display: flex;
-    height: 75px;
-    top: -10%;
-    left: 22%;
-}
-
-#pin_N:hover {
-    transform: scale(1.5);
-}
-
 
 @font-face {
     font-family: 'Normal';
@@ -117,21 +92,9 @@ body.index5 {
     height: 250vh;
 }
 
-body.index6 {
-    overflow-x: hidden;
-    height: 250vh;
-}
-
-body.index7 {
-    overflow-x: hidden;
-    height: 250vh;
-}
-
 body.indexSearch {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 #titleFont {
@@ -178,6 +141,7 @@ body.indexSearch {
     position: fixed;
     width: 100%;
 }
+ 
 
 #s_skyline {
     height: 100vh;
@@ -186,21 +150,8 @@ body.indexSearch {
     width: 100%;
 }
 
+
 #b_skyline {
-    height: 100vh;
-    display:  flexbox;
-    position: fixed;
-    width: 100%;
-}
-
-#v_skyline {
-    height: 100vh;
-    display:  flexbox;
-    position: fixed;
-    width: 100%;
-}
-
-#n_skyline {
     height: 100vh;
     display:  flexbox;
     position: fixed;
@@ -223,7 +174,7 @@ body.indexSearch {
     width: 100%;
 }
 
-#shanghai, #beijing, #newyork, #vienna {
+#shanghai, #beijing, #newyork {
     display: flex;
     position: absolute;
     align-items: center;
