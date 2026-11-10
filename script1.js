@@ -1,3 +1,4 @@
+
 globe = document.getElementById("globe");
 
 globe.addEventListener("click", function() { 

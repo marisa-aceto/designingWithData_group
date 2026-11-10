@@ -7,6 +7,8 @@ let div2 = document.getElementById("cloud");
 let div3 = document.getElementById("rain");
 let div4 = document.getElementById("snow");
 
+let search = document.querySelector(".indexSearch");
+
 console.log(latitude);
 console.log(longitude);
 
@@ -23,6 +25,16 @@ fetch(apiURL)
     let cloudy = data.current.cloud_cover;
     let rainy = data.current.rain;
     let snowy = data.current.snowfall;
+    let daytime = data.current.is_day;
+
+    if (daytime == 1) {
+            search.style.backgroundImage = "url(images/daysky.jpg)";
+            search.style.backgroundRepeat = "no-repeat";
+        }
+        else if (daytime == 0) {
+            search.style.backgroundImage = "url(images/nightsky.jpg)";
+            search.style.backgroundRepeat = "no-repeat";
+        }
 
     if (temp >= 0) {
         div1.style.height = ((temp / 40) * 50) + (50) + "%";
