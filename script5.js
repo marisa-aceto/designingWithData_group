@@ -31,22 +31,24 @@ fetch(apiURL)
             document.querySelector("#day_T").textContent = "day time";
             r_skyline.style.backgroundImage = "url(images/daysky.jpg)";
             r_skyline.style.backgroundRepeat = "no-repeat";
-            text[0].style.color = "black";
-            text[1].style.color = "black";
-            text[2].style.color = "black";
-            text[3].style.color = "black";
-            text[4].style.color = "black";
+            text[0].style.color = "pink";
+            text[1].style.color = "pink";
+            text[2].style.color = "pink";
+            text[3].style.color = "pink";
+            text[4].style.color = "pink";
+            weatherBox.style.color = "pink";
         }
         else if (daytime == 0) {
             document.querySelector("#day_T").textContent = "night time";
             r_skyline.style.backgroundImage = "url(images/nightsky.jpg)";
             r_skyline.style.backgroundRepeat = "no-repeat";
             r_skyline.style.filter = "brightness(0.5)";
-            text[0].style.color = "white";
-            text[1].style.color = "white";
-            text[2].style.color = "white";
-            text[3].style.color = "white";
-            text[4].style.color = "white";
+            text[0].style.color = "lightblue";
+            text[1].style.color = "lightblue";
+            text[2].style.color = "lightblue";
+            text[3].style.color = "lightblue";
+            text[4].style.color = "lightblue";
+            weatherBox.style.color = "lightblue";
         }
 
 
@@ -71,6 +73,18 @@ fetch(apiURL)
             clouds[3].style.opacity = "0.75";
         }
 
+        if (temp >= 16) {
+            document.querySelector("#outfit_inside_R").textContent = "shorts, t-shirts, and dresses!";
+        }
+
+        else if (temp >= 5) {
+            document.querySelector("#outfit_inside_R").textContent = "a light jacket, sweaters, and jeans";
+        }
+
+        else {
+            document.querySelector("#outfit_inside_R").textContent = "a heavy jacket, hats, and gloves";
+        }
+
         document.querySelector("#rain_T").textContent = rainy;
 
         if (rainy == 0) {
@@ -78,27 +92,15 @@ fetch(apiURL)
         }
         else if (rainy <= 2.5) {
             rainfal.style.opacity = "0.5";
-            rainfall.style.animation = "rainMove 2s infinite"
+            rainfall.style.animation = "rainMove 2s infinite";
         }
         else if (rainy <=20) {
             rainfal.style.opacity = "0.75";
-            rainfall.style.animation = "rainMove 1.5s infinite"
+            rainfall.style.animation = "rainMove 1.5s infinite";
         }
         else {
             rainfal.style.opacity = "1";
-            rainfall.style.animation = "rainMove 0.75s infinite"
-        }
-
-        if (temp >= 16) {
-            document.querySelector("#outfit_inside_T").textContent = "shorts, t-shirts, and dresses!";
-        }
-
-        else if (temp >= 5) {
-            document.querySelector("#outfit_inside_T").textContent = "a light jacket, sweaters, and jeans";
-        }
-
-        else {
-            document.querySelector("#outfit_inside_T").textContent = "a heavy jacket, hats, and gloves";
+            rainfall.style.animation = "rainMove 0.75s infinite";
         }
 
 

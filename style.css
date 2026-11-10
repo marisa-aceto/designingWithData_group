@@ -71,9 +71,30 @@
     font-size: 25px;
 }
 
-body {
+body.index1 {
     overflow-x: hidden;
     height: 250vh;
+}
+body.index2 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index3 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index4 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index5 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+
+body.indexSearch {
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 #titleFont {

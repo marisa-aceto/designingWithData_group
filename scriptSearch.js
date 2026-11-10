@@ -34,8 +34,11 @@ fetch(apiURL)
     }
 
     div2.style.height = cloudy + "%";
+    div2.style.background = "darkgrey"
     div3.style.height = rainy + "%";
+    div2.style.background = "lightblue"
     div4.style.height = snowy + "%";
+    div2.style.background = "lightgreen"
 
     document.querySelector("#temp_Search").textContent = temp;
     document.querySelector("#cloud_Search").textContent = cloudy;
