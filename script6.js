@@ -1,5 +1,5 @@
 let city = "Vienna";
-const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=48.2085&longitude=16.3721&hourly=is_day,temperature_2m,wind_speed_10m,wind_direction_10m,weather_code,precipitation,rain,snowfall,cloud_cover&daily=weather_code,precipitation_sum,rain_sum,snowfall_sum,wind_direction_10m_dominant&timezone=auto&forecast_days=3&models=geosphere_seamless`;
+const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=48.2085&longitude=16.3721&hourly=is_day,temperature_2m,wind_speed_10m,wind_direction_10m,weather_code,precipitation,rain,snowfall,cloud_cover&timezone=auto&past_hours=1&forecast_days=1&forecast_hours=1&models=geosphere_seamless`;
 
 v_skyline = document.getElementById("v_skyline");
 clouds = document.getElementsByClassName("clouds");
