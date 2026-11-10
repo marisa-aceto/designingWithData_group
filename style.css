@@ -60,6 +60,30 @@
     transform: scale(1.5);
 }
 
+#pin_V {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: -20%;
+    left: 50%;
+}
+
+#pin_V:hover {
+    transform: scale(1.5);
+}
+
+#pin_N {
+    position: relative;
+    display: flex;
+    height: 75px;
+    top: -10%;
+    left: 22%;
+}
+
+#pin_N:hover {
+    transform: scale(1.5);
+}
+
 @font-face {
     font-family: 'Normal';
     src: url('font/Lakeside_Castle.ttf') format('truetype');
@@ -69,6 +93,19 @@
 
 .t_text {
     font-size: 25px;
+}
+
+h1.b_text {
+    font-size: 25px;
+}
+
+p.b_text {
+    font-size: 15px;
+}
+
+.b_text{
+    background: lightgray;
+    font-family: "Normal";
 }
 
 body.index1 {
@@ -88,6 +125,15 @@ body.index4 {
     height: 250vh;
 }
 body.index5 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+
+body.index6 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index7 {
     overflow-x: hidden;
     height: 250vh;
 }
@@ -150,6 +196,20 @@ body.indexSearch {
     width: 100%;
 }
 
+#n_skyline {
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+#v_skyline {
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
 
 #b_skyline {
     height: 100vh;
@@ -174,7 +234,7 @@ body.indexSearch {
     width: 100%;
 }
 
-#shanghai, #beijing, #newyork {
+#shanghai, #beijing, #newyork, #vienna {
     display: flex;
     position: absolute;
     align-items: center;

@@ -1,11 +1,11 @@
 let params = new URLSearchParams(window.location.search);
-
 let latitude = params.get("latitude");
 let longitude = params.get("longitude");
 let div1 = document.getElementById("temp");
 let div2 = document.getElementById("cloud");
 let div3 = document.getElementById("rain");
 let div4 = document.getElementById("snow");
+
 
 let search = document.querySelector(".indexSearch");
 
@@ -46,11 +46,11 @@ fetch(apiURL)
     }
 
     div2.style.height = cloudy + "%";
-    div2.style.background = "darkgrey"
+    div2.style.background = "darkgrey";
     div3.style.height = rainy + "%";
-    div2.style.background = "lightblue"
+    div2.style.background = "lightblue";
     div4.style.height = snowy + "%";
-    div2.style.background = "lightgreen"
+    div2.style.background = "lightgreen";
 
     document.querySelector("#temp_Search").textContent = temp;
     document.querySelector("#cloud_Search").textContent = cloudy;
@@ -64,10 +64,12 @@ fetch(apiURL2)
 .then(data => {
 
     console.log(data);
+    console.log(data.address);
 
-    let city = data.address.city;
+    let city = data.address.city || data.address.town;
+    let state = data.address.state;
     let country = data.address.country;
 
-    document.querySelector("#place").textContent = city + ", " + country;
+    document.querySelector("#place").textContent = city + ", " + state + ", " + country;
 
 });
