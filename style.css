@@ -40,8 +40,8 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 23%;
-    left: 86%;
+    top: 13%;
+    left: 83%;
 }
 
 #pin_S:hover {
@@ -52,8 +52,8 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 9%;
-    left: 83%;
+    top: 1%;
+    left: 80%;
 }
 
 #pin_B:hover {
