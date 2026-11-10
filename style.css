@@ -16,7 +16,7 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 20%;
+    top: 19%;
     left: 20%;
 }
 
@@ -24,8 +24,8 @@
     position: relative;
     display: flex;
     height: 75px;
-    top: 14%;
-    left: 48%;
+    top: 14.5%;
+    left: 47.5%;
 }
 
 #pin_T:hover {
