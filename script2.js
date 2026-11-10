@@ -91,15 +91,15 @@ fetch(apiURL)
             rainfall.style.opacity = "0";
         }
         else if (rainy <= 2.5) {
-            rainfal.style.opacity = "0.5";
+            rainfall.style.opacity = "0.5";
             rainfall.style.animation = "rainMove 2s infinite";
         }
         else if (rainy <=20) {
-            rainfal.style.opacity = "0.75";
+            rainfall.style.opacity = "0.75";
             rainfall.style.animation = "rainMove 1.5s infinite";
         }
         else {
-            rainfal.style.opacity = "1";
+            rainfall.style.opacity = "1";
             rainfall.style.animation = "rainMove 0.75s infinite";
         }
 

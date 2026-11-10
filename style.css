@@ -142,14 +142,22 @@ body.indexSearch {
     width: 100%;
 }
 
+<<<<<<< Updated upstream
 #s_skyline{
+=======
+#s_skyline {
+>>>>>>> Stashed changes
     height: 100vh;
     display:  flexbox;
     position: fixed;
     width: 100%;
 }
 
+<<<<<<< Updated upstream
 #b_skyline{
+=======
+#b_skyline {
+>>>>>>> Stashed changes
     height: 100vh;
     display:  flexbox;
     position: fixed;
