@@ -14,7 +14,6 @@ fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
 
-
         console.log(data)
 
         let temp = data.current.temperature_2m;
