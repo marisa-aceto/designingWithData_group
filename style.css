@@ -71,9 +71,30 @@
     font-size: 25px;
 }
 
-body {
+body.index1 {
     overflow-x: hidden;
     height: 250vh;
+}
+body.index2 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index3 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index4 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+body.index5 {
+    overflow-x: hidden;
+    height: 250vh;
+}
+
+body.indexSearch {
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 #titleFont {
@@ -115,6 +136,20 @@ body {
 }
 
 #r_skyline {
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+#s_skyline{
+    height: 100vh;
+    display:  flexbox;
+    position: fixed;
+    width: 100%;
+}
+
+#b_skyline{
     height: 100vh;
     display:  flexbox;
     position: fixed;
@@ -268,4 +303,28 @@ p.map_text {
     font-family: Normal;
     padding: 30px;
     background-color: steelblue;
+}
+
+.bars {
+    display: flex;
+    column-gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar_Location {
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+    width: 50px;
+    background: grey;
+    border-radius: 5px;
+    align-items: flex-end;
+
+}
+
+.bar_Location div {
+    width: 100%;
+    background-color: darkgrey;
+    border-radius: 5px;
 }
