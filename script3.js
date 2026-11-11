@@ -31,24 +31,24 @@ fetch(apiURL)
             document.querySelector("#day_T").textContent = "day time";
             s_skyline.style.backgroundImage = "url(images/daysky.jpg)";
             s_skyline.style.backgroundRepeat = "no-repeat";
-            text[0].style.color = "black";
-            text[1].style.color = "black";
-            text[2].style.color = "black";
-            text[3].style.color = "black";
-            text[4].style.color = "black";
-            weatherBox.style.color = "black";
+            text[0].style.color = "darkblue";
+            text[1].style.color = "darkblue";
+            text[2].style.color = "darkblue";
+            text[3].style.color = "darkblue";
+            text[4].style.color = "darkblue";
+            weatherBox.style.color = "darkblue";
         }
         else if (daytime == 0) {
             document.querySelector("#day_T").textContent = "night time";
             s_skyline.style.backgroundImage = "url(images/nightsky.jpg)";
             s_skyline.style.backgroundRepeat = "no-repeat";
             s_skyline.style.filter = "brightness(0.5)";
-            text[0].style.color = "white";
-            text[1].style.color = "white";
-            text[2].style.color = "white";
-            text[3].style.color = "white";
-            text[4].style.color = "white";
-            weatherBox.style.color = "white";
+            text[0].style.color = "lightblue";
+            text[1].style.color = "lightblue";
+            text[2].style.color = "lightblue";
+            text[3].style.color = "lightblue";
+            text[4].style.color = "lightblue";
+            weatherBox.style.color = "lightblue";
         }
 
         if (cloudy == 0) {
