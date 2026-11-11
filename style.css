@@ -1,11 +1,12 @@
 #map{
     height: 125vh;
-    width: 100%;
+    width: 200vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("images/worldMap.jpeg");
     background-position: center;
     overflow-y: hidden;
+    position: relative;
 }
 
 #before {
@@ -13,18 +14,18 @@
 }
 
 #pin_T {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: 19.25%;
-    left: 19.5%;
+    top: 20%;
+    left: 19%;
 }
 
 #pin_R {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: 13%;
+    top: 22.5%;
     left: 47.5%;
 }
 
@@ -37,10 +38,10 @@
 }
 
 #pin_S {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: 13%;
+    top: 33%;
     left: 83%;
 }
 
@@ -49,10 +50,10 @@
 }
 
 #pin_B {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: 1%;
+    top: 29%;
     left: 80%;
 }
 
@@ -61,11 +62,11 @@
 }
 
 #pin_V {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: -26%;
-    left: 45%;
+    top: 19%;
+    left: 50%;
 }
 
 #pin_V:hover {
@@ -73,11 +74,11 @@
 }
 
 #pin_N {
-    position: relative;
+    position: absolute;
     display: flex;
     height: 75px;
-    top: -13%;
-    left: 21%;
+    top: 24%;
+    left: 19.25%;
 }
 
 #pin_N:hover {
